@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "bonch-schedule"
+version = "0.0.1"
+description = "Schedule Module for bonch"
+authors = ["Никоноров Николай <nnv@bitt.moe>"]
+readme = "README.md"
+packages = [{include = "main"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
