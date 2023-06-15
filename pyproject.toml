@@ -4,7 +4,7 @@ version = "0.0.1"
 description = "Schedule Module for bonch"
 authors = ["Никоноров Николай <nnv@bitt.moe>"]
 readme = "README.md"
-packages = [{include = "main"}]
+packages = [{include = "bonch"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
