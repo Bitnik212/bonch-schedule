@@ -137,6 +137,8 @@ class Parser:
             :return:
             """
             item_type = sub_item.find("small").text
+            item_type = str(item_type.split("занятие началось")[0])  # Убираем лишнуюю часть
+            item_type = item_type.strip(" ")  # Убираем пробелы по бокам
             item_title = sub_item.find("b").text
             return {
                 "title": item_title,
