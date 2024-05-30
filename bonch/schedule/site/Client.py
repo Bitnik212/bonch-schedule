@@ -4,5 +4,5 @@
 """
 
 
-class ClientSite:
+class Client:
     pass

@@ -36,7 +36,6 @@ class Parser:
             items = soup.find_all('tr', attrs={'style': 'background: #FF9933 !important '})
             for item in items:
                 parsed_item = self.__parse_item(item, self.reverse_now_date)
-                print(parsed_item)
                 resp.append(parsed_item)
             return {"status": 200, "response": resp}
         except IndexError as e:
@@ -123,6 +122,8 @@ class Parser:
             para_number = sub_item.text[:sub_item.text.index("(")].replace(" ", "")
             para_time_str = sub_item.text[sub_item.text.index("("):]
             para_time_str = para_time_str.replace("(", "").replace(")", "").replace(" ", "")  # clean time
+            if len(para_time_str) == 10:
+                para_time_str = "0" + para_time_str
             return {
                 "number": para_number,
                 "start": revnowdate.replace('.', '-') + "T" + para_time_str.split('-')[0] + ":00",
