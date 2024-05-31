@@ -13,7 +13,7 @@ from bonch.common.model.DayScheduleModel import DayScheduleModel
 from bonch.common.model.SubjectModel import SubjectModel
 from bonch.common.model.SubjectTimeModel import SubjectTimeModel
 from bonch.common.model.WeekScheduleModel import WeekScheduleModel
-from bonch.schedule.ISchedule import ISchedule
+from bonch.common.ISchedule import ISchedule
 from bonch.schedule.lk.Client import Client
 from bonch.schedule.lk.Parser import Parser
 

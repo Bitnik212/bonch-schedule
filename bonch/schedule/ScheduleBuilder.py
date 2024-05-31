@@ -7,15 +7,14 @@ from typing import Optional
 
 from requests.sessions import Session
 
-from bonch.schedule.ISchedule import ISchedule
+from bonch.common import DEFAULT_USER_AGENT
+from bonch.common.ISchedule import ISchedule
 from bonch.schedule.lk import ScheduleLkClient
 from bonch.schedule.lk.ScheduleFromLK import ScheduleFromLK
 from bonch.schedule.site.SiteScheduleType import SiteScheduleType
 
 
 class ScheduleBuilder:
-
-    DEFAULT_USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
 
     def __init__(self, session: Optional[Session] = None, user_agent: str = DEFAULT_USER_AGENT):
         self.__session = session
