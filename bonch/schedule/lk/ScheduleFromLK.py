@@ -57,6 +57,7 @@ class ScheduleFromLK(ISchedule):
             subjects.append(
                 SubjectModel(
                     number=subject["number"],
+                    name=subject["title"],
                     time=SubjectTimeModel(
                         from_time=datetime.fromisoformat(subject["start"]),
                         to_time=datetime.fromisoformat(subject["end"])
